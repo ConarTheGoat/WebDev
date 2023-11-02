@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<!--HEAD--->
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MotorMarketPlace</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!--BODY--->
+<body>
+    
+ 
+    <!--Header area-->
+	<header> 
+		<h1>MotorMarketPlace<!-- Use any element to open/show the overlay navigation menu -->
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></h1>
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    
+    
+	</header>
+   
+        <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          
+     <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="index.html" class="active">Home</a>
+        <a href="buying.html">Buying</a>
+        <a href="selling.html">Selling</a>
+        <a href="parts.html">Parts</a>
+        <a href="accounts.html">Account</a>
+    </div>
+          
+    </div>
+          
+    <!--Navigation bar-->
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="buying.html">Buying</a></li>
+            <li><a href="selling.html">Selling</a></li>
+            <li><a href="parts.html">Parts</a></li>
+            <li><a href="accounts.html">Account</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <img id="auto-slide-image" src="images/car0.jpg" height="80%" width="70%" > 
+    </main>
+
+    <!--Display items in grid (row x column) format-->
+    <section>
+        <!--An empty grid of items-->
+        <h1 class="text-style-center">Featured</h1>  
+        <div id="item-list"></div>  
+    </section> 
+    
+
+    <h1 class="SCS">Sample Car Sound</h1><br>
+
+    <div class="audio">
+        <audio controls>
+            <source src="media/carsounds.mp3">
+        </audio>
+    </div>
+
+    <footer>Created by Connor Ferguson<br> &#169 2023 MotorMarketPlace all rights reserved       
+    </footer>
+    
+   
+      
+    <script src="javascript.js"></script>
+</body>
+</html>

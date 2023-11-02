@@ -1,0 +1,576 @@
+
+body {
+    margin: 0;
+    padding: 0;
+	background-color: white;
+	font-family: "Times New Roman", serif;
+    flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+}
+
+
+
+header {
+	/*Set the height*/
+	height: 10vh;
+	/*Set background color*/
+	background-color: rgb(8, 130, 170);
+	
+	/*Centralize the h1 both vertically and horizontally*/
+	display: flex;
+	justify-content: left;
+	align-items: left;
+}
+
+header h1 {
+    margin: 1.5em;
+    text-align: left;
+    display: inline-block;
+}
+
+
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+  
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+  
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+  
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+  
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+  
+h2{
+    text-align: center;
+    padding-top: 10px;
+   
+}
+
+nav {
+	text-align: center;/*Centralize the nav bar text*/
+    height: 2em;
+	/*Set background color*/
+	background-color: rgb(35, 160, 202);
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	/*Set style for text*/
+	color: white;
+	font-size: 32px;/*Reference: normal font size is 16px*/  
+    visibility: hidden;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	
+	display: block;/*Vertical*/
+}
+
+nav ul li {
+	display: inline-block;/*Vertical*/
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+    padding: 10px;
+
+	/*dropdown menu*/
+	/*position: relative;*/
+}
+
+nav ul li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;  
+	text-transform: uppercase;
+    background-color: #ebca38;
+}
+
+.active {
+    background-color: #ffe643;
+}
+  
+nav ul li a:hover:not(.active) {
+    background-color: #ffd000;
+}
+
+.account-container{
+    width: 80%;
+    padding: 60px 0;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.account-flex-row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.account-box{
+    background: #3694e1;
+    min-width: 400px;
+    height: 400px;
+    flex-basis: 40%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+nav ul li:hover>ul {
+    visibility: visible;
+    display: block;
+}
+  
+section h1{
+    display: grid;
+    align-items: center;
+    display: block;
+    justify-content: center;
+}
+
+main {
+	min-width: 100px;
+    /* Set its height*/
+	min-height: 80vh; 
+	/*Centralize the main content both vert and horiz*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main section button {
+    padding: 1.5em;
+	width: 130px;
+    border: 2px solid black;
+}
+.auto-slide-title{
+    
+	padding-top: 10px;
+	align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+.auto-slide-image{
+   padding: 0 25px;
+}
+/*---------*/
+/*Grid of items*/
+#item-list {
+    display: grid;
+    grid-template-columns: 1fr;/*1 column*/
+    background-color: #2196F3;
+    padding: 0.5px;
+    margin: 0.5em;  
+}
+
+
+.item-card {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    padding: 0.5em;
+    margin: 0.2em;
+}
+  
+.text-style-center {
+  text-align: center;
+}
+  
+.image-style {
+    display: block; 
+    height: 150px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+.image-style2 {
+    display: block; 
+    height: 300px; 
+    width: auto;
+    margin-left: auto; 
+    margin-right: auto;
+    flex-basis: 25%;
+}
+  
+.add-button-style {
+    margin: 0.5em;
+    padding: 1em;
+    background-color: #ebca38;
+    cursor: pointer;  
+}
+
+/*parts slideshow*/
+
+.mySlides img{
+    display: block;
+    width: 100%;
+}
+
+.mySlides iframe{
+    width: 100%;
+   display: block;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  width: 50%;
+  margin: auto;
+}   
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: #818181;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* Categories */
+/* Define the grid dimensions and borders */
+.grid {
+    display: grid;
+    grid-template-rows: repeat(4, 4fr);
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+  
+
+}
+
+.car-Rows{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.grid h1{
+    display: flex;
+	justify-content: center;
+	text-align: center;
+    
+} 
+
+/* Define the grid cell styles */
+.cell {
+    border: 1px solid black;
+    background-color: lightgray;
+}
+/*----*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+	padding: 0;
+}
+  
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+  
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 11.5px;
+    background: #ebca38;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+  
+.parts-search{
+    padding-top: 100px;
+}
+
+form.example button:hover {
+    background: #ffd000;
+}
+  
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+.box-conatiner{
+    width: 60%;
+    padding: 20px 0;
+    margin: auto;
+    border: 10px;
+    border-color: black;
+}
+
+.row-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 45px;
+}
+
+.box{
+    background: rgb(255, 255, 255);
+    min-width: 400px;
+    height: 400px;
+    flex-basis: 40%;
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 125px;
+    border: 5px solid;  
+}
+
+#search{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    padding: 10px;
+    font-size: 25px;
+    
+}
+
+#sell{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    padding: 10px;
+    font-size: 25px;
+    
+}
+
+
+#account{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    padding: 10px;
+    font-size: 25px;
+    
+}
+
+.account-box h1{
+    padding: 10px;
+}
+
+section h1{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    padding: 10px;
+}
+
+.SCS{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    padding: 10px;
+}
+
+.audio{
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
+
+
+
+footer {
+	height: 5vh;
+	background-color: rgb(8, 130, 170);
+	/*Centralize the paragraph both vertically and horizontally*/
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+    text-align: center;
+    margin-top: auto;
+}
+
+
+
+
+
+/*------------------------*/
+/*Styles changes for MEDIUM DEVICES: iPads or Tablets
+  screen width: 426 px -> 768px 
+*/
+@media only screen and (min-width: 426px) {
+    
+
+    #item-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;/*2 columns*/
+    }    
+
+    #item-listB {
+        display: grid;
+        grid-template-columns: 1fr 1fr;/*2 columns*/
+    }
+}
+
+
+/*------------------------*/
+/*Styles changes for BIG DEVICES: PC or desktops
+  screen width: >= 769px 
+*/
+@media only screen and (min-width: 769px) {
+    
+    nav{
+        visibility: visible;
+    }
+
+    #item-listB {
+        display: grid;
+        grid-template-columns: 1fr 1fr;/*2 columns*/
+    }
+
+    #item-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;/*4 columns*/
+    }   
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+}

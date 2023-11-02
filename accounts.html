@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<!--HEAD--->
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MotorMarketPlace</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!--BODY--->
+<body>
+    
+ 
+    <!--Header area-->
+	<header> 
+		<h1>MotorMarketPlace<!-- Use any element to open/show the overlay navigation menu -->
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></h1>
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    
+    
+	</header>
+   
+        <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          
+     <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="index.html" >Home</a>
+        <a href="buying.html">Buying</a>
+        <a href="selling.html">Selling</a>
+        <a href="parts.html">Parts</a>
+        <a href="accounts.html"class="active">Account</a>
+    </div>
+          
+    </div>
+          
+    <!--Navigation bar-->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buying.html">Buying</a></li>
+            <li><a href="selling.html">Selling</a></li>
+            <li><a href="parts.html">Parts</a></li>
+            <li><a href="accounts.html"class="active">Account</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="account-box-section">
+        <div class="account-container">
+            <div class="account-flex-row">
+                <div class="account-box">
+                    <h1>Login</h1>
+                    <span style='font-size:100px;'>&#9786;</span>                   
+                        <form id="account">
+                            <label>Username:</label>
+                                <input type="text" placeholder="Enter.." name="sell">           
+                        </form>
+                        <form id="account">
+                            <label>Password:</label>
+                                <input type="text" placeholder="Enter.." name="sell">           
+                        </form>
+                        <button class="add-button-style" >Login</button>
+                </div>
+                <div class="account-box">
+                    <h1>Create account</h1>                
+                        <form id="account">
+                            <label>Enter Username:</label>
+                                <input type="text" placeholder="Enter.." name="sell">           
+                        </form>
+                        <form id="account">
+                            <label>Enter Email:</label>
+                                <input type="text" placeholder="Enter.." name="sell">           
+                        </form>
+                      
+                        <form id="account">
+                            <label>Enter Password:</label>
+                                <input type="text" placeholder="Enter.." name="sell">           
+                        </form>
+                       
+                        <form id="account">
+                            <label>Confirm Password:</label>
+                                <input type="text" placeholder="Enter.." name="sell">           
+                        </form>
+
+
+                        <button class="add-button-style" >Login</button>
+                </div>
+            </div> 
+        </div> 
+    </div> 
+ 
+
+   
+    
+    <footer>Created by Connor Ferguson<br> &#169 2023 MotorMarketPlace all rights reserved       
+    </footer>
+    
+   
+      
+    <script src="javascript.js"></script>
+</body>
+</html>

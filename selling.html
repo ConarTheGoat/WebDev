@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<!--HEAD--->
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MotorMarketPlace</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!--BODY--->
+<body>
+    
+ 
+    <!--Header area-->
+	<header> 
+		<h1>MotorMarketPlace<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></h1>
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>   
+	</header>
+   
+
+        
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          
+     <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="index.html">Home</a>
+        <a href="buying.html">Buying</a>
+        <a href="selling.html"class="active">Selling</a>
+        <a href="parts.html">Parts</a>
+        <a href="accounts.html">Account</a>
+    </div>
+          
+    </div>
+          
+    <!--Navigation bar-->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buying.html">Buying</a></li>
+            <li><a href="selling.html"class="active">Selling</a></li>
+            <li><a href="parts.html">Parts</a></li>
+            <li><a href="accounts.html">Account</a></li>
+        </ul>
+    </nav>
+    
+    <section>
+        <!--Dropdowm menu using Select tag-->
+        <h1>Sell your car</h1>
+ 
+        <form id="sell">
+            <label>New/Used:</label>
+            <select>
+                <option>New</option>
+                <option>Used</option>
+            </select>
+            
+            <label>Make:</label>
+                <input type="text" placeholder="Enter.." name="sell">
+        
+            <label>Model:</label>
+                <input type="text" placeholder="Enter.." name="sell">
+
+           
+    
+        </form>
+        
+        <form id="sell">
+            <label>Year:</label>
+            <select>
+                <option>1950's</option>
+                <option>1960's</option>
+                <option>1970's</option>
+                <option>1980's</option>
+                <option>1990's</option>
+                <option>2000's</option>
+                <option>2010's</option>
+                <option>2020's</option>
+            
+            </select>
+            
+           
+            <label>Colour:</label>
+                <input type="text" placeholder="Enter.." name="sell">
+       
+
+            <label>Body Style:</label>
+            <select>
+                <option>Coupe</option>
+                <option>SUV</option>
+                <option>Hatchback</option>
+                <option>Sedan</option>
+                <option>Truck</option>
+            </select>
+    
+        </form>
+
+        <form id="sell">
+            <label>Kilometers:</label>
+                <input type="text" placeholder="Enter.." name="sell">
+    
+           
+            <label>Engine size:</label>
+                <input type="text" placeholder="Enter.." name="sell">
+    
+        </form>
+  
+    </section>
+
+    <section>
+        <h1>Add photos</h1>
+   
+     <div class="boxes">
+        <div class="box-container">
+            <div class="row-flex">
+                <div class="box">
+                    <span style='font-size:100px;'>&#10010;</span><span style='font-size:100px;'>&#128247;</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+   </section>
+   
+
+    <footer>Created by Connor Ferguson<br> &#169 2023 MotorMarketPlace all rights reserved 
+    </footer>
+       
+    <script src="javascript.js"></script>
+</body>
+
+</html>

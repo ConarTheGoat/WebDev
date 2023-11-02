@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<!--HEAD--->
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MotorMarketPlace</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!--BODY--->
+<body>
+    
+ 
+    <!--Header area-->
+	<header> 
+		<h1>MotorMarketPlace<!-- Use any element to open/show the overlay navigation menu -->
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></h1>
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    
+    
+	</header>
+   
+        <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          
+     <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="index.html">Home</a>
+        <a href="buying.html">Buying</a>
+        <a href="selling.html">Selling</a>
+        <a href="parts.html"class="active">Parts</a>
+        <a href="accounts.html">Account</a>
+    </div>
+          
+    </div>
+          
+    <!--Navigation bar-->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buying.html">Buying</a></li>
+            <li><a href="selling.html">Selling</a></li>
+            <li><a href="parts.html"class="active">Parts</a></li>
+            <li><a href="accounts.html">Account</a></li>
+        </ul>
+    </nav>
+    
+    <h2>Car parts</h2>
+
+    <div class="parts-search">
+         
+            <form class="example" action="/action_page.php" style="margin:auto;max-width:400px">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        
+    </div>
+   
+    
+    <h2 style="text-align:center">Featured Cars Parts</h2>
+
+    <div class="container">
+        <div class="mySlides">
+             <iframe width="1280" height="720"
+                src="https://www.youtube.com/embed/eFvumubU2io" 
+                title="Auto Parts Store Promo Video" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	        </iframe>
+        </div>
+    
+        <div class="mySlides">
+        <img src="images/car1.png">
+        </div>
+    
+        <div class="mySlides">
+            <img src="images/car2.png">
+        </div>
+        
+        <div class="mySlides">
+            <img src="images/car3.png">
+        </div>
+    
+        <div class="mySlides">
+            <img src="images/car4.png">
+        </div>
+        
+        <div class="mySlides">
+            <img src="images/car5.png">
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>  
+    
+    
+    <footer>Created by Connor Ferguson<br> &#169 2023 MotorMarketPlace all rights reserved       
+    </footer>
+    
+   
+      
+    <script src="javascript.js"></script>
+</body>
+
+</html>

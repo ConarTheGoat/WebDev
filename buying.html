@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<!--HEAD--->
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MotorMarketPlace</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!--BODY--->
+<body>
+    
+ 
+    <!--Header area-->
+	<header> 
+		<h1>MotorMarketPlace<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></h1>
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>   
+	</header>
+   
+
+        
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          
+     <!-- Overlay content -->
+    <div class="overlay-content">
+        <a href="index.html">Home</a>
+        <a href="buying.html"class="active">Buying</a>
+        <a href="selling.html">Selling</a>
+        <a href="parts.html">Parts</a>
+        <a href="accounts.html">Account</a>
+    </div>
+          
+    </div>
+          
+    <!--Navigation bar-->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buying.html"class="active">Buying</a></li>
+            <li><a href="selling.html">Selling</a></li>
+            <li><a href="parts.html">Parts</a></li>
+            <li><a href="accounts.html">Account</a></li>
+        </ul>
+    </nav>
+    <section>
+        <!--Dropdowm menu using Select tag-->
+        <h1>Search for a car</h1>
+ 
+        <form id="search">
+            <label>New/Used:</label>
+            <select>
+                <option>New</option>
+                <option>Used</option>
+            </select>
+            
+            <label>Make:</label>
+                <input type="text" placeholder="Search.." name="search">
+        
+            <label>Model:</label>
+                <input type="text" placeholder="Search.." name="search">
+           
+    
+        </form>
+       
+        
+        
+        <form id="search">
+            <label>Year:</label>
+            <select>
+                <option>1950's</option>
+                <option>1960's</option>
+                <option>1970's</option>
+                <option>1980's</option>
+                <option>1990's</option>
+                <option>2000's</option>
+                <option>2010's</option>
+                <option>2020's</option>
+            
+            </select>
+            
+            <label>Price:</label>
+            <select>
+                <option>$1000</option>
+                <option>$2000</option>
+                <option>$3000</option>
+                <option>$4000</option>
+                <option>$5000</option>
+                <option>$6000</option>
+
+            </select>
+        
+            <label>Body Style:</label>
+            <select>
+                <option>Coupe</option>
+                <option>SUV</option>
+                <option>Hatchback</option>
+                <option>Sedan</option>
+                <option>Truck</option>
+            </select>
+    
+        </form>
+  
+    </section>
+
+ <grid> 
+    <h1>Categories</h1> 
+    
+    <div class="car-Rows">
+        <div class="item-style">            
+          <img src= images/car0.png class="image-style2"  >
+            <button class="add-button-style" >Sedan</button>
+            <p class="text-style-center">a 4-door passenger car with a trunk that is separate from the passengers with a three-box body: the engine, the area for passengers, and the trunk.</p>
+            <div class="text-style-center"></div>
+        </div>
+    </div>
+       
+    <div class="car-Rows">
+        <div class="item-style">            
+          <img src= images/car4.png class="image-style2"  >
+            <button class="add-button-style" >Super Car</button>
+            <p class="text-style-center">an expensive car that's flashy, fast, luxurious, and prestigious. Think of a supercar as top of the line — the best of the best.</p>
+            <div class="text-style-center"></div>
+          </div>
+    </div>
+    
+    <div class="car-Rows"> 
+        <div class="item-style">            
+          <img src= images/car2.png class="image-style2"  >
+            <button class="add-button-style" >Coupe</button>
+            <p class="text-style-center">A closed roof, 2-door passenger car with a three-box body for the engine and the passenger compartment. Most importantly, a coupe is a vehicle with interior space that is under 33 cubic feet.</p>
+            <div class="text-style-center"></div>
+        </div>
+    </div>
+
+    <div class="car-Rows">
+        <div class="item-style">            
+            <img src= images/car5.png class="image-style2"  >
+            <button class="add-button-style" >SUV</button>
+            <p class="text-style-center">stylish, sleek looking vehicles that offer elegant city driving but also handle rugged terrain thanks to a typical 4x4 capability.</p>
+            <div class="text-style-center"></div>
+        </div>
+    </div>
+ </grid>
+    
+   
+   
+
+    <footer>Created by Connor Ferguson<br> &#169 2023 MotorMarketPlace all rights reserved       
+    </footer>
+       
+    <script src="javascript.js"></script>
+</body>
+
+
